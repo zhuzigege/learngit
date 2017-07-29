@@ -1,1 +1,1 @@
-echo "yes" >> /home/hhhtdata/zhule/test.dat
+echo "yes" >> /home/hhhtdata/zhule/learngit/test.dat
