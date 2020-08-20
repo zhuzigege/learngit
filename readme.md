@@ -13,9 +13,9 @@
 
 ## <a name="module">二、各模块功能</a>
 1. mysql入库  
-1.1 import_mysql.sh 针对存在分表情况的数据入库，目前暴力从各分表获取数据并load到hive  
-      usage：import_mysql.sh [task_name] [task_date]  
-      参数说明：config_import_muysql文件夹包含当前所有mysql入库任务参数，task_name参数与改文件夹的文件是对应的。  
+ - import_mysql.sh 针对存在分表情况的数据入库，目前暴力从各分表获取数据并load到hive  
+ usage：import_mysql.sh [task_name] [task_date]  
+ 参数说明：config_import_muysql文件夹包含当前所有mysql入库任务参数，task_name参数与改文件夹的文件是对应的。  
 1.2 sqoop_import_hue.sh 封装采用sqoop import入库的方法，入库更高效稳定  
      usage：sqoop_import.sh [task_name] [task_date]  
      
