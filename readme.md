@@ -22,16 +22,16 @@
      
 2. ck入库
  - 基于python读取ck服务接口的方式（比较耗时，已经停止）
- - 采用基于Flink的方案  
- usage：import_ck_flink.sh [task_name] [task_date]  
- 目前CK入库的任务参数存放在mysql中的flink_job_ods_param中
+ - import_ck_flink.sh  
+ usage： [task_name] [task_date]  
+ 采用基于Flink的方案。目前CK入库的任务参数存放在mysql中的flink_job_ods_param中
  
 3. hive计算
  - 基于hue的HIVE Server2 Action  
     只需配置要运行的hql脚本，具体配置参考Hue上已配置的任务  
  - hive_excute_hue.sh   
- 使用shell封装对hive-sql的执行，该封装能自动检查当前hive任务的依赖，并能使用使用各种时间参数（hue上每个时间参数都需要配置）。usage：hive_excute_hue.sh [task_name] [task_date]  
- hql脚本都在hql文件夹内，task_name与文件夹内的文件对应；  
+ usage：hive_excute_hue.sh [task_name] [task_date]  
+ 使用shell封装对hive-sql的执行，该封装能自动检查当前hive任务的依赖，并能使用使用各种时间参数（hue上每个时间参数都需要配置）。hql脚本都在hql文件夹内，task_name与文件夹内的文件对应；  
  关于使用时间参数：传入task_date，脚本默认可以使用对应task_date的相对日期参数，具体参考脚本和param/param_date_day.param文件  
  
 4. mysql出库  
